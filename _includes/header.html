@@ -48,9 +48,11 @@
                       <div class="col-sm-12">
                           <div class="team-member">
                               <img src="https://avatars1.githubusercontent.com/u/16122067?v=3&s=200" class="img-responsive img-circle" alt="">
-
-                              <p class="text-muted">Something</p>
-
+                              <ul class="list-inline social-buttons">
+                                {% for network in site.social %}
+                                <li><a href="{{ network.url }}"><i class="fa fa-{{ network.title }}"></i></a><li>
+                                {% endfor %}
+                              </ul>
                           </div>
                       </div>
                   </div>
